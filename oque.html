@@ -71,14 +71,28 @@
   nav.scrolled { box-shadow: 0 2px 40px rgba(0,0,0,0.06); }
 
   .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+  }
+
+  .nav-logo-img {
+    height: 40px;
+    width: auto;
+    max-width: 180px;
+  }
+
+  .nav-logo-text {
     font-family: var(--font-serif);
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0.12em;
     color: var(--charcoal);
-    text-decoration: none;
     text-transform: uppercase;
+    display: none;
   }
+
   .nav-logo span { color: var(--gold); }
 
   .nav-links {
@@ -885,7 +899,12 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#" class="nav-logo">Grupo<span>J</span>aguar</a>
+  <a href="#" class="nav-logo">
+    <!-- ESPAÇO PARA LOGO PNG - Adicione sua imagem aqui -->
+    <img src="logo.png" alt="Grupo Jaguar Logo" class="nav-logo-img">
+    <!-- Ou use texto como fallback -->
+    <span class="nav-logo-text">Grupo<span>J</span>aguar</span>
+  </a>
   <ul class="nav-links">
     <li><a href="#metodologia">Metodologia</a></li>
     <li><a href="#servicos">Serviços</a></li>
